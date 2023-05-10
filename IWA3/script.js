@@ -1,5 +1,5 @@
-import* user from './nwabisi.js';
-import user from './johannes.js';
-import user from './alex.js';
+import* as nwabisi from './nwabisi.js';
+import* as johannes from './johannes.js';
+import*as alex from './alex.js';
 
 console.log('Roles:', nwabisa.role, johanes.role, alex.role);

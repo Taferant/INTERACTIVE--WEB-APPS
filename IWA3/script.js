@@ -1,4 +1,4 @@
-import user from './nwabisi';
+import* user from './nwabisi.js';
 import user from './johannes.js';
 import user from './alex.js';
 

@@ -26,13 +26,15 @@ const pens = 5 * 'NONE_SELECTED'
 let shipping = null
 let currency = '$'
 
-if (shoes + batteries + pens + shirts > 1000 &&   ) {
+const total= shoes+batteries+pens+ shirts+toys
+if  (total > 1000 && location===RSA || location===NAM  )
+ {
 	if (location = NAM && customers < 2) {
 			if (location = RSA)
 		    shipping = 0 || calcShipping
 		}
 	}
-}
+
 
 if ((shipping = 0) && (customers !== 1)) 
 { console.log(WARNING) }

@@ -1,13 +1,23 @@
+const value ='*'
 
-
-const nickname= 'Timmy';
-const firstname = 'Timothy';
-const myname= 'nickname'
-
-switch(myname){
-case 'nickname': console.log(Good morning,+ nickname); break;
-
-case 'firstname': console.log('Good morning, +firstname'); break;
-
- default: console.log('Good morning')   
+const test1=()=>{
+    console.log(value)
 }
+
+
+const test2=()=>{
+    console.log(value +value)
+}
+
+const test3=()=>{
+    console.log(value +value+value)
+}
+
+const test4=()=>{
+    console.log(value +value+ value+ value)
+}
+
+test1()
+test2()
+test3()
+test4()

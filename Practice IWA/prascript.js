@@ -1,4 +1,4 @@
-const value ='*'
+/*const value ='*'
 
 const test1=()=>{
     console.log(value)
@@ -20,4 +20,14 @@ const test4=()=>{
 test1()
 test2()
 test3()
-test4()
+test4()*/
+
+let value='*'
+
+console.log(value)
+
+value='**'
+console.log(value)
+
+value='***'
+console.log(value)

@@ -12,7 +12,7 @@ const expenses = {
   
 const tax = {
     734: '3%',
-    234: '20%',
+   234: '20%',
     913: '12%',
     415: '38%',
     502: '42%',
@@ -20,18 +20,21 @@ const tax = {
 
 const rent = {
     none: 0,
-    'smallroom': 200,
-    'largeroom': 300,
-    'smallapartment': 400,
-    'largeapartment': 800,
-    'smallhouse': 1200,
-    'largehouse': 2400,
-}
+    'small-room': 200,
+    'large-room': 300,
+    'small-apartment': 400,
+    'large-apartment': 800,
+    'small-house': 1200,
+    'large-house': 2400,
+};
 
 // You can change below however you want
 
-const taxAsDecimal = tax[913] / 100
-const startingAfterTax = salary * 1 - taxAsDecimal
-const type = rent.largeapartment
-const balance = startingAfterTax- expenses.transport- expenses.food - expenses.type
-console.log(balance)
+const taxAsDecimal = parseFloat(tax['913']) / 100;
+const startingAfterTax = salary * (1 - taxAsDecimal);
+const type = lodging+'-'+ size;
+//const type = rent.large-apartment;
+const currency= 'R';
+const balance = startingAfterTax- expenses.transport- expenses.food - rent["large-apartment"];
+console.log(currency, balance.toFixed(2));
+

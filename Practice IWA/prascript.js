@@ -22,7 +22,7 @@ test2()
 test3()
 test4()*/
 
-let value='*'
+/*let value='*'
 
 console.log(value)
 
@@ -30,4 +30,27 @@ value='**'
 console.log(value)
 
 value='***'
-console.log(value)
+console.log(value)*/
+
+const value= '*'
+//let value= i
+
+
+/*if(true){
+    console.log(value)
+    if(true){
+        console.log(value+value)
+        
+    }
+    if(false){
+        console.log()
+    }
+}*/
+
+for(let i=0; i<=5; i++)
+{
+    return i++;
+    i= value;
+    
+
+}

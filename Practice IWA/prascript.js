@@ -49,8 +49,8 @@ const value= '*'
 
 for(let i=0; i<=5; i++)
 {
-    return i++;
     i= value;
+    return i++;
     
-
 }
+console.log(value)

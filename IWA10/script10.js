@@ -55,24 +55,26 @@ const futureId = 9
 
 console.log(holidays.futureId&&holidays.futureId.name || 'ID {futureId} not created yet')
 
-let copied = holidays.christmas
-copied = { 
-     
-    name: 'X-mas Day',
+let copied = holidays[christmas]
+copied={
+    
+        name: 'X-mas',
+    
+}
 
-   } 
 
-let correctDate = new Date(`${copied.name}`)
+
+let correctDate = new Date(copied.date)
 correctDate.setHours(0);
 correctDate.setMinutes(0);
-const isEarlier = correctDate.getTime() <=holidays[christmas].date.getTime();
+const isEarlier = correctDate.getTime() <holidays[6].date.getTime();
 console.log('New date is earlier:', isEarlier)
 if (isEarlier){
     copied.date = correctDate
 }
  
- console.log('ID change:', holidays[christmas].id != copied.id ? copied.id :false);
- console.log('Name change:', holidays[christmas].name != copied.name ?false : copied.name);
+ console.log('ID change:', holidays[christmas].id != copied.id);
+ console.log('Name change:', holidays[christmas].name != copied.name || copied.name);
  console.log('Date change:', holidays[christmas].date != copied.date || copied.date.tolocaleDateString('en-GB'));
 
  const firstHolidayTimestamp = Math.min(

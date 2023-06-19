@@ -7,8 +7,8 @@ const logTwice = (parameter) => {
   console.log(parameter);
 };
 
-const sayHello = () => {
+const hobbies = () => {
   logTwice(`Hello, ${firstName} (${age}). I love ${hobby}!`);
 };
 
-sayHello();
+hobbies();

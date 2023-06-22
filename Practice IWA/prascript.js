@@ -64,7 +64,7 @@ do {
   i += 1;
   console.log(i);
 } while (i < 5);
-*/
+
 let n = 0;
 let x = 0;
 while (n < 3) {
@@ -72,4 +72,19 @@ while (n < 3) {
   x += n;
   console.log(n)
   console.log(x)
+}*/
+
+function lotto(){
+    let lotto=[1,...49];
+
+    const RandomNumber=()=>{
+        Math.floor(math.RandomNumber()*49)
+        do{
+            lotto.push(RandomNumber)
+        }while(lotto.length<5)
+        
+            return lotto
+        
+    }
+    console.log(lotto())
 }

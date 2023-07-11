@@ -32,13 +32,28 @@ const handleDragOver = (event) => {
 }
 
 
-const handleDragStart = (event) => {}
-const handleDragEnd = (event) => {}
-const handleHelpToggle = (event) => {}
-const handleAddToggle = (event) => {}
-const handleAddSubmit = (event) => {}
-const handleEditToggle = (event) => {}
-const handleEditSubmit = (event) => {}
+const handleDragStart = (event) => {
+    event.preventDefault();
+
+}
+const handleDragEnd = (event) => {
+
+}
+const handleHelpToggle = (event) => {
+
+}
+const handleAddToggle = (event) => {
+
+}
+const handleAddSubmit = (event) => {
+button.innerHTML='submit'
+}
+const handleEditToggle = (event) => {
+button.innerHTML='add order'
+}
+const handleEditSubmit = (event) => {
+    document.querySelector()
+}
 const handleDelete = (event) => {}
 
 html.add.cancel.addEventListener('click', handleAddToggle)

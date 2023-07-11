@@ -11,7 +11,7 @@ if (!books || !Array.isArray(books)) {
 if (!range || range.length < 2) {
   throw new Error('Range must be an array with two numbers');
 }
-
+/*
 const day = {
   dark: '10, 10, 20',
   light: '255, 255, 255',
@@ -20,13 +20,13 @@ const day = {
 const night = {
   dark: '255, 255, 255',
   light: '10, 10, 20',
-};
+};*/
 
 
 
 const fragment = document.createDocumentFragment();
 const extracted = books.slice(0, 36);
-
+// to show image and author
 function createPreview(bookData) {
   const { author, image, title } = bookData;
 
@@ -82,7 +82,7 @@ for (let i = 0; i < extracted.length; i++) {
 }
 
 document.querySelector('[data-list-items]').appendChild(fragment);
-
+//search genre
 const genresFragment = document.createDocumentFragment();
 let element = document.createElement('option');
 element.value = 'any';
@@ -97,7 +97,7 @@ for (const [id, name] of Object.entries(genres)) {
 }
 
 document.querySelector('[data-search-genres]').appendChild(genresFragment);
-
+// search aucthor
 const authorsFragment = document.createDocumentFragment();
 element = document.createElement('option');
 element.value = 'any';
@@ -112,7 +112,7 @@ for (const [id, name] of Object.entries(authors)) {
 }
 
 document.querySelector('[data-search-authors]').appendChild(authorsFragment);
-
+// theme settings
 const v= window.matchMedia&& window.matchMedia('(prefers-color-schem:dark)')
 
 
@@ -130,15 +130,16 @@ const css = {
 
 document.documentElement.style.setProperty('--color-dark', css.dark);
 document.documentElement.style.setProperty('--color-light', css.light);
-document.querySelector('[data-list-button]').textContent = `Show more (${Math.max(0, matches.length - page * BOOKS_PER_PAGE)})`;
 
-document.querySelector('[data-list-button]').disabled === !(matches.length - page * BOOKS_PER_PAGE > 0);
+//document.querySelector('[data-list-button]').textContent = `Show more (${Math.max(0, matches.length - page * BOOKS_PER_PAGE)})`;
+
+//document.querySelector('[data-list-button]').disabled === !(matches.length - page * BOOKS_PER_PAGE > 0);
 
 document.querySelector('[data-list-button]').innerHTML = `
   <span>Show more</span>
   <span class="list__remaining">(${Math.max(0, matches.length - page * BOOKS_PER_PAGE)})</span>
 `;
-
+/*
 document.querySelector('[data-search-cancel]').addEventListener('click', () => {
   if (!document.querySelector('[data-search-overlay]').showModal(day)) {
     // Handle the click event
@@ -150,18 +151,22 @@ document.querySelector('[data-settings-cancel]').addEventListener('click', () =>
     // Handle the click event
   }
 });
-
+*/
+/*
 document.querySelector('[data-settings-form]').addEventListener('submit', (event) => {
   event.preventDefault();
   // Handle the form submission
 });
+
 
 document.querySelector('[data-list-close]').addEventListener('click', () => {
   if (!document.querySelector('[data-list-active]').showModal().open()) {
     // Handle the click event
   }
 });
+*/
 
+//show more 
 document.querySelector('[data-list-button]').addEventListener('click', () => {
   const start = page * BOOKS_PER_PAGE;
   const end = (page + 1) * BOOKS_PER_PAGE;
@@ -171,13 +176,13 @@ document.querySelector('[data-list-button]').addEventListener('click', () => {
   document.querySelector('[data-list-button]').disabled = !(matches.length - (page + 1) * BOOKS_PER_PAGE > 0);
   page++;
 });
-
+// search
 document.querySelector('[data-header-search]').addEventListener('click', () => {
   if (document.querySelector('[data-search-overlay]').showModal()) {
     document.querySelector('[data-search-title]').focus();
   }
 });
-
+// cancel
 document.querySelector('[data-search-cancel]').addEventListener('click', () => {
     document.querySelector('[data-search-overlay]').close();
    });
@@ -193,10 +198,7 @@ document.querySelector('[data-header-settings]').addEventListener('click', () =>
     document.querySelector('[data-settings-overlay]').close();
    });
 
-
-
-
-
+   //returning results of the searched book
 document.querySelector('[data-search-form]').addEventListener('submit', (event) => {
   event.preventDefault();
   const formData = new FormData(event.target);
@@ -246,7 +248,7 @@ document.querySelector('[data-search-form]').addEventListener('submit', (event) 
   window.scrollTo(0, 0);
   document.querySelector('[data-search-overlay]').open() = false;
 });
-
+// save the changed theme
 document.querySelector('[data-settings-form]').addEventListener('submit', (event) => {
   event.preventDefault();
   const formData = new FormData(event.target);
